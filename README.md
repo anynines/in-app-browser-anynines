@@ -20,18 +20,71 @@ $ npm install @ionic-native/in-app-browser@https://github.com/anynines/in-app-br
 
 ## [Usage Documentation](https://ionicframework.com/docs/native/in-app-browser/)
 
+For all regular features and instuctions see Ionic's original repo:
+
 Plugin Repo: [https://github.com/apache/cordova-plugin-inappbrowser](https://github.com/apache/cordova-plugin-inappbrowser)
 
 Launches in app Browser
 
+
+## Simple example implementation
+
+```
+import React from 'react'
+import './WebView.css' 
+import { InAppBrowser, InAppBrowserObject, InAppBrowserOptions } from '@ionic-native/in-app-browser-anynines'
+
+export const WebView: React.FC = (props) => {
+
+  type InAppBrowserInstance = InAppBrowserObject | null
+
+  const [webView, setWebView] = React.useState(null as InAppBrowserInstance)
+
+  const onBackButton = () => {
+    debugger
+    console.log('back', webView)
+    if (webView) {
+      (webView as unknown as InAppBrowserObject).goBack()
+    }
+  }
+
+  React.useEffect(() => {
+
+    const url = 'https://<MyAuthenticatedWebLocation>'
+
+    const browserOptions: InAppBrowserOptions = {
+      location: 'no',
+      toolbar: 'no',
+      x: 0,
+      y: 78, // calculate what space you need for header, nav etc.
+      width: window.innerWidth,
+      height: window.innerHeight - 78
+    }
+
+    const headers = {
+      'Authorization': 'Bearer abcd123456789<MyAuthToken>'
+    }
+
+    const browser = InAppBrowser.create(url, '_blank', browserOptions, headers)
+    setWebView(browser)
+
+  }, [])
+
+  return (
+    <div className='webview'>
+      <button onClick={onBackButton}>Back</button>
+    </div>
+  )
+
+}
+```
+
 ## Supported platforms
 
-- AmazonFire OS
-  - Android
-  - Browser
-  - iOS
-  - macOS
-  - Windows
+- Android
+- iOS
+
+The additions above were only implemented in these while the original plugin 
   
 
 
