@@ -22,7 +22,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/@ionic-native/in-app-browser/-/in-app-browser-5.31.1.tgz",
   "_shasum": "207df353e6b8d433f57eb9d38497582fbc4dcd7c",
-  "_spec": "@ionic-native/in-app-browser",
+  "_spec": "@ionic-native/in-app-browser-anynines",
   "_where": "/Users/martinorbanz/Projects/webviews",
   "author": {
     "name": "ionic"
