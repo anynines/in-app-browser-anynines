@@ -29,7 +29,7 @@ Launches in app Browser
 
 ## Simple example implementation
 
-```
+```typescript
 import React from 'react'
 import './WebView.css' 
 import { InAppBrowser, InAppBrowserObject, InAppBrowserOptions } from '@ionic-native/in-app-browser-anynines'
