@@ -1,5 +1,5 @@
 {
-  "_from": "@ionic-native/in-app-browser",
+  "_from": "@ionic-native/in-app-browser-anynines",
   "_id": "@ionic-native/in-app-browser-anynines@5.31.1",
   "_inBundle": false,
   "_integrity": "sha512-/J5hCJKu7EjwZUoapjj2bQ1GIF2K3KGx0oT+8V9Tw0xoxuxDGaAn8eaWYRtUukimciHU1I8oQWtcIiN8yraQPQ==",
@@ -10,7 +10,7 @@
     "registry": true,
     "raw": "@ionic-native/in-app-browser-anynines",
     "name": "@ionic-native/in-app-browser-anynines",
-    "escapedName": "@ionic-native%2fin-app-browser",
+    "escapedName": "@ionic-native%2fin-app-browser-anynines",
     "scope": "@ionic-native",
     "rawSpec": "",
     "saveSpec": null,
