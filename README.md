@@ -4,13 +4,17 @@
 
 # In App Browser
 
+## Installation
+
 This is an extended fork of the original plugin that adds som features
 - support for custom headers (e.g. auth) in the inital web location request
 - params for position and size in the InAppBrowserOptions
 - a public goBack() method that can be called from the Ionic app
 
+It is supposed to be used with the forked cordova-plugin-inappbrowser-anynines
+
 ```
-$ npm i 
+$ npm i cordova-plugin-inappbrowser-anynines@https://github.com/anynines/cordova-plugin-inappbrowser-anynines.git
 $ npm install @ionic-native/in-app-browser@https://github.com/anynines/in-app-browser-anynines.git
 ```
 
