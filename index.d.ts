@@ -66,7 +66,7 @@ export interface InAppBrowserOptions {
     /** (Android) Set to yes to hide the url bar on the location toolbar, only has effect if user has location set to yes. The default value is no. */
     hideurlbar?: 'yes' | 'no';
     /** (iOS Only) If set to yes the entered y position will be shifted by the height of the iOS status bar so the entire window will be reachable */
-    ignoreStatusBar?: 'yes' | 'no';
+    ignorestatusbar?: 'yes' | 'no';
     /** (iOS Only) Set to yes or no to open the keyboard when form elements receive focus via JavaScript's focus() call (defaults to yes). */
     keyboardDisplayRequiresUserAction?: 'yes' | 'no';
     /**
