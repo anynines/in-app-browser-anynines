@@ -169,7 +169,7 @@ export declare class InAppBrowserObject {
      * Returns the WKWebView's canGoBack bool value.
      * True if there is more than one item in the browsing history
      */
-    canGoBack(): void;
+    canGoBack(successCallback: (result: boolean) => void, errorCallback: (error: Error | string) => void): void;
     /**
      * Calls the InAppBrowser's goBack function (history)
      */
