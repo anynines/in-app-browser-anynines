@@ -65,6 +65,8 @@ export interface InAppBrowserOptions {
     hidespinner?: 'yes' | 'no';
     /** (Android) Set to yes to hide the url bar on the location toolbar, only has effect if user has location set to yes. The default value is no. */
     hideurlbar?: 'yes' | 'no';
+    /** (iOS Only) If set to yes the entered y position will be shifted by the height of the iOS status bar so the entire window will be reachable */
+    ignorestatusbar?: 'yes' | 'no';
     /** (iOS Only) Set to yes or no to open the keyboard when form elements receive focus via JavaScript's focus() call (defaults to yes). */
     keyboardDisplayRequiresUserAction?: 'yes' | 'no';
     /**
@@ -163,6 +165,11 @@ export declare class InAppBrowserObject {
      * if the InAppBrowser was already hidden.
      */
     hide(): void;
+    /**
+     * Returns the WKWebView's canGoBack bool value.
+     * True if there is more than one item in the browsing history
+     */
+    canGoBack(successCallback: (result: boolean) => void, errorCallback: (error: Error | string) => void): void;
     /**
      * Calls the InAppBrowser's goBack function (history)
      */
