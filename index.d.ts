@@ -149,8 +149,10 @@ export declare class InAppBrowserObject {
     /**
      * Method to be called after the "beforeload" event to continue the script
      * @param strUrl {String} The URL the InAppBrowser should navigate to.
+     * @param headers {String | Record<string, string} Either a serialized string or JS object (hash map)
+     * containing custom headers to be sent with the request
      */
-    _loadAfterBeforeload(strUrl: string): void;
+    loadAfterBeforeload(strUrl: string, headers?: string | Record<string, string>): void;
     /**
      * Displays an InAppBrowser window that was opened hidden. Calling this has no effect
      * if the InAppBrowser was already visible.
@@ -166,8 +168,7 @@ export declare class InAppBrowserObject {
      */
     hide(): void;
     /**
-     * Returns the WKWebView's canGoBack bool value.
-     * True if there is more than one item in the browsing history
+     * Takes two callbacks for success and error, where success recieves the WebView's canGoBack boolean value
      */
     canGoBack(successCallback: (result: boolean) => void, errorCallback: (error: Error | string) => void): void;
     /**
