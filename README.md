@@ -6,6 +6,8 @@
 
 This is an extended fork of the original Ionic Native InAppBrowser plugin that adds the following features:
 - support for custom headers (e.g. auth) in the inital web location request
+- headers can optionally be sent with subsequent navigations using
+  on('beforeload') and loadAfterBeforeLoad()
 - params for position and size in the InAppBrowserOptions
 - 
 - a public goBack() method that can be called from the Ionic app to step back in the browser history
