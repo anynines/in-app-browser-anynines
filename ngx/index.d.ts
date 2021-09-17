@@ -154,6 +154,13 @@ export declare class InAppBrowserObject {
      */
     loadAfterBeforeload(strUrl: string, headers?: string | Record<string, string>): void;
     /**
+       * Takes a JSON-stringified request of any method and creates a request object from that which then gets loaded.
+       * @param jsonRequestData {String} JSON representation a an HTTP request.
+       * @param headers {String | Record<string, string} Either a serialized string or JS object (hash map)
+       * containing custom headers to be sent with the request
+       */
+    injectRequest(jsonRequestData: string, headers?: string | Record<string, string>): void;
+    /**
      * Displays an InAppBrowser window that was opened hidden. Calling this has no effect
      * if the InAppBrowser was already visible.
      */
