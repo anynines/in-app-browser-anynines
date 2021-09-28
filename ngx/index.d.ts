@@ -163,10 +163,6 @@ export declare class InAppBrowserObject {
      */
     injectRequest(jsonRequestData: string, headers?: string | Record<string, string>): void;
     /**
-     * Calls didFinishNavigation to reset the WebView's waitBeforeLoad state.
-     */
-    finishNavigation(): void;
-    /**
      * Displays an InAppBrowser window that was opened hidden. Calling this has no effect
      * if the InAppBrowser was already visible.
      */
