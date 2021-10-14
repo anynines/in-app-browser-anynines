@@ -32,7 +32,8 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "@types/cordova": "latest"
+    "@types/cordova": "latest",
+    "rxjs": "^5.5.0 || ^6.5.0"
   },
   "deprecated": false,
   "description": "Ionic Native - Native plugins for ionic apps",
@@ -41,7 +42,6 @@
   "module": "index.js",
   "name": "@ionic-native/in-app-browser-anynines",
   "peerDependencies": {
-    "rxjs": "^5.5.0 || ^6.5.0",
     "@ionic-native/core": "^5.1.0"
   },
   "repository": {
